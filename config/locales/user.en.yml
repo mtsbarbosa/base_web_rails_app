@@ -1,0 +1,13 @@
+en:
+   user:
+     _entity_updated_success: User was successfully updated.
+     _entity_updated_fail: User was not updated.
+     _entity_destroyed_success: User has been destroyed.
+     _entity_destroyed_fail: User has not been destroyed.
+     _entity_index: List of Users
+     _entity_create: Create User
+     _entity_edit: Edit User
+     _entity_update: Update User
+     _entity_destroy: Destroy User
+     _entity_destroy_message_confirm: Are you sure you want to destroy this user? It cannot be undone.
+     _entity: User

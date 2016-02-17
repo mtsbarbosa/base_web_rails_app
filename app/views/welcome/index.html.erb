@@ -2,3 +2,12 @@
 <div>
 	Welcome!
 <div>
+<div>
+	<% if user_signed_in? %>
+		<!-- Something you want to show to a logged user in a welcome page -->
+		<p>You are logged in!</p>
+		<p>
+			<%= link_to(I18n.t("user._entity_index"), users_path) %>
+		</p>
+	<% end %>
+</div>

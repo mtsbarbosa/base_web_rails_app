@@ -1,0 +1,6 @@
+en:
+   session:
+      _sign_in: Sign In
+      _sign_out: Sign Out
+      _sign_up: Sign Up
+      _invalid_singin_full_message: Invalid email or password. Log in Email Password Remember me Sign up Forgot your password?

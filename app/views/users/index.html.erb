@@ -1,0 +1,6 @@
+<h1><%= I18n.t("user._entity_index") %></h1>
+<% if @users.nil? == false && @users.empty? == false %>
+	<% @users.each do |user| %>
+		<p><%= link_to user.email, user %></p>
+	<% end %>
+<% end %>
