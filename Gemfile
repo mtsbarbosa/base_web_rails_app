@@ -15,6 +15,8 @@ gem 'execjs'
 gem 'therubyracer', platforms: :ruby
 # Use devise for authentication and users management
 gem 'devise'
+#use cancan for permissions
+gem 'cancan'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

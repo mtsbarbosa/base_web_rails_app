@@ -3,5 +3,6 @@ FactoryGirl.define do
 		email 'sample@sample.com'
 		password "MyString"
 		password_confirmation "MyString"
-	end	
+		role User::ROLES[:registered]
+	end
 end
