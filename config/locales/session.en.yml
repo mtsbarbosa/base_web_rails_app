@@ -4,3 +4,4 @@ en:
       _sign_out: Sign Out
       _sign_up: Sign Up
       _invalid_singin_full_message: Invalid email or password. Log in Email Password Remember me Sign up Forgot your password?
+      _logged_in: You are logged in!

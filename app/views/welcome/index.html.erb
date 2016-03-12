@@ -4,8 +4,7 @@
 <div>
 <div>
 	<% if user_signed_in? %>
-		<!-- Something you want to show to a logged user in a welcome page -->
-		<p>You are logged in!</p>
+		<p><%= I18n.t("session._logged_in") %></p>
 		<% if can? :manage, User %>
 			<p>
 				<%= link_to(I18n.t("user._entity_index"), users_path) %>

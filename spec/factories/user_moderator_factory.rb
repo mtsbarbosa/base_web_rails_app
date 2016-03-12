@@ -4,5 +4,6 @@ FactoryGirl.define do
 		password "MyString"
 		password_confirmation "MyString"
 		role User::ROLES[:moderator]
+		aasm_state "active"
 	end	
 end

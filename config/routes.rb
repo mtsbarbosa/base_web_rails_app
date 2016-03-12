@@ -57,5 +57,8 @@ Rails.application.routes.draw do
   #   end
   devise_for :users
   resources :users, only: [:index, :show, :edit, :update, :destroy]
-
+  resources :states
+  resources :workflows do
+    resources :transitions
+  end
 end

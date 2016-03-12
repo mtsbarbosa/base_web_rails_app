@@ -13,10 +13,14 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'execjs'
 gem 'therubyracer', platforms: :ruby
+#use log4r to logs
+gem 'log4r'
 # Use devise for authentication and users management
 gem 'devise'
 #use cancan for permissions
 gem 'cancan'
+#use aasm for state machine
+gem 'aasm'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
