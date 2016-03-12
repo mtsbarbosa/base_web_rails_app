@@ -3,7 +3,6 @@ require 'rails_helper'
 module WorkflowHelpers
 	def start_aasm_to_user(user)
 		if(!user.respond_to?('aasm'))
-			Rails.logger.debug 'teste'
 			state_active = FactoryGirl.build(:state_active)
 			state_inactive = FactoryGirl.build(:state_inactive)
 			user_workflow = FactoryGirl.build(:user_workflow)
