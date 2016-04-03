@@ -45,6 +45,8 @@ gem 'angular-ui-bootstrap-rails'
 group :production do
 	#support for heroku
 	gem 'rails_12factor'
+
+  gem 'heroku_secrets', git: 'https://github.com/alexpeattie/heroku_secrets.git'
 end
 
 group :development, :test do
