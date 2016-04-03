@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160227180311) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "states", force: :cascade do |t|
     t.string   "name"
     t.string   "entity"
@@ -29,9 +32,9 @@ ActiveRecord::Schema.define(version: 20160227180311) do
     t.integer  "state_to_id"
   end
 
-  add_index "transitions", ["state_from_id"], name: "index_transitions_on_state_from_id"
-  add_index "transitions", ["state_to_id"], name: "index_transitions_on_state_to_id"
-  add_index "transitions", ["workflow_id"], name: "index_transitions_on_workflow_id"
+  add_index "transitions", ["state_from_id"], name: "index_transitions_on_state_from_id", using: :btree
+  add_index "transitions", ["state_to_id"], name: "index_transitions_on_state_to_id", using: :btree
+  add_index "transitions", ["workflow_id"], name: "index_transitions_on_workflow_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",           null: false
@@ -50,8 +53,8 @@ ActiveRecord::Schema.define(version: 20160227180311) do
     t.string   "aasm_state"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "workflows", force: :cascade do |t|
     t.string   "name"
@@ -60,4 +63,5 @@ ActiveRecord::Schema.define(version: 20160227180311) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "transitions", "workflows"
 end
