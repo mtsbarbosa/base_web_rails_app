@@ -50,6 +50,8 @@ Devise.setup do |config|
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [:email]
 
+  config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
+
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will
